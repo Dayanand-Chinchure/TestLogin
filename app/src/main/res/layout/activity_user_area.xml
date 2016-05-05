@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:src="@drawable/h"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:id="@+id/userType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:touchscreenBlocksFocus="false"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/imageButton2"
+        android:layout_alignLeft="@+id/imageButton2"
+        android:layout_alignStart="@+id/imageButton2">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Issue                "
+            android:id="@+id/admin"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search             "
+            android:checked="true"
+            android:id="@+id/student" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Return"
+            android:id="@+id/department"
+            android:checked="false" />
+
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etBook"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/userType"
+        android:layout_alignEnd="@+id/userType"
+        android:hint="Book Name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:onClick="goUserActivity"
+        android:id="@+id/bSearch"
+        android:layout_below="@+id/etBook"
+        android:layout_alignRight="@+id/imageButton2"
+        android:layout_alignEnd="@+id/imageButton2"
+        android:layout_alignLeft="@+id/userType"
+        android:layout_alignStart="@+id/userType" />
+
+</RelativeLayout>
